@@ -22,7 +22,6 @@ This project demonstrates parallel processing of image tasks using a master-slav
    ```shell
    git clone https://github.com/your-username/image-processing-master-slave.git
 
-
 2. Install the required dependencies:
    ```shell
    pip install opencv-python psutil
@@ -36,12 +35,18 @@ This project demonstrates parallel processing of image tasks using a master-slav
 5. The processed images will be saved in the project directory with the corresponding task names.
 
 ## Project Structure
-
-- `master.py`: The master process script that coordinates task distribution and result collection.
-- `slave.py`: The slave process script that executes the assigned tasks on images.
+The master script will start the slave processes and distribute the image processing tasks among them. The number of initial slave processes is set to 2, but the system will dynamically adjust the number of slaves based on CPU utilization. If the CPU utilization exceeds 80%, additional slave processes will be started to handle the workload.
+The master script will process all the image files found in the project directory. It will apply three types of tasks to each image:
 - `task1.py`: Contains the implementation of edge detection task.
 - `task2.py`: Contains the implementation of corner detection task.
 - `task3.py`: Contains the implementation of facial recognition task.
+
+The main codes:
+- `master.py`: The master process script that coordinates task distribution and result collection.
+- `slave.py`: The slave process script that executes the assigned tasks on images.
+
+The processed images will be saved in the project directory with filenames indicating the original image and the applied task, e.g., image1_output_task1.jpg, image1_output_task2.jpg, image1_output_task3.jpg.
+The master script will also log the execution time for each task and the total execution time for processing all the images.
 
 ## Contributing
 
