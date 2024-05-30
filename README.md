@@ -19,15 +19,19 @@ This project demonstrates parallel processing of image tasks using a master-slav
 ## Usage
 
 1. Clone the repository:
-git clone https://github.com/your-username/image-processing-master-slave.git
+   ```shell
+   git clone https://github.com/your-username/image-processing-master-slave.git
+
 
 2. Install the required dependencies:
-pip install opencv-python psutil
+   ```shell
+   pip install opencv-python psutil
 
 3. Place the image files you want to process in the project directory.
 
 4. Run the master script:
-python master.py
+   ```shell
+    python master.py
 
 5. The processed images will be saved in the project directory with the corresponding task names.
 
