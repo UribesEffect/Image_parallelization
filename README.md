@@ -22,7 +22,7 @@ This project demonstrates parallel processing of image tasks using a master-slav
 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/your-username/image-processing-master-slave.git
+   git clone https://github.com/UribesEffect/Image_parallelization
 
 2. Install the required dependencies:
    ```shell
