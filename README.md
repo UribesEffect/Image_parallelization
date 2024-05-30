@@ -2,6 +2,8 @@
 
 This project demonstrates parallel processing of image tasks using a master-slave architecture. The master process distributes tasks to slave processes, which execute edge detection, corner detection, and facial recognition on images. The system dynamically adjusts the number of slave processes based on CPU utilization to optimize performance.
 
+(NOTE: in the ProjectOperating.pdf you can have a complete document of all this project
+
 ## Features
 
 - Parallel processing of image tasks using Python's multiprocessing and socket communication
